@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('./media/WhatsApp\ Image\ 2023-05-17\ at\ 12.24.25.jpg');
+            background-repeat: no-repeat;
+	        background-attachment: fixed;
+	        background-size: 100% 100%;
+            
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            margin: 100px;
+        }
+        
+        .button {
+            padding: 10px 20px;
+            font-size: 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+        @keyframes happy-animation {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        .happy-animation {
+            animation-name: happy-animation;
+            animation-duration: 1s;
+        }
+    </style>
+    <script>
+        function addHappyAnimation() {
+            var button = document.getElementById('enter-button');
+            button.classList.add('happy-animation');
+            setTimeout(function() {
+                window.location.href = "home.html";
+            }, 1000);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 offset-md-3">
+                <button id="enter-button" class="button btn btn-primary btn-lg btn-block" onclick="addHappyAnimation()">Click to Enter</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
